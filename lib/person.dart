@@ -14,12 +14,12 @@ class _PersonState extends State<Person> {
 
     return Scaffold(
       body: Container(
-          child: screenWidth >=600 ?
+          child:
           Row(
         children:<Widget> [
           Container(
             height: 200,
-            width: 200,
+            width: screenWidth/3,
             color: Colors.lightGreen,
             child: Center(
                 child: Text(
@@ -29,27 +29,18 @@ class _PersonState extends State<Person> {
           ),
           Container(
             height: 200,
-            width: 200,
+            width: screenWidth/3,
             color: Colors.pink,
           ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
-          ),
-        ],
-      ) :
-      Row(
-        children: [
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.blue,
-          ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.red,
+          GestureDetector(
+            onTap: (){
+
+            },
+            child: Container(
+              height: 200,
+              width: screenWidth/3,
+              color: Colors.blue,
+            ),
           ),
         ],
       )
